@@ -1,16 +1,18 @@
-package com.example.domain.book;
+package com.example.book;
 
+import com.example.book.api.AuthorId;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-public class Author {
+class Author {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private AuthorId id;
     private String firstName;
     private String lastName;
     @ManyToMany(mappedBy = "authors")

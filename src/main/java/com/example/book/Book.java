@@ -1,16 +1,18 @@
-package com.example.domain.book;
+package com.example.book;
 
+import com.example.book.api.ISBN;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-@Entity
+@AllArgsConstructor
 @NoArgsConstructor
-public class Book {
-
+@Entity
+class Book {
     @Id
-    private String isbn;
+    private ISBN isbn;
     private String title;
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
