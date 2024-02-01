@@ -1,4 +1,4 @@
-package com.example.book.api;
+package com.example.author.api;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.GeneratedValue;
